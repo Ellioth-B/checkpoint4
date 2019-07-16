@@ -10,6 +10,7 @@ import { AccesComponent } from './acces/acces.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ReserverComponent } from './reserver/reserver.component';
+import { AdminComponent } from './admin/admin.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ReserverComponent } from './reserver/reserver.component';
     AccesComponent,
     NavbarComponent,
     FooterComponent,
-    ReserverComponent
+    ReserverComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

@@ -5,6 +5,7 @@ import { AccesComponent } from './acces/acces.component';
 import { AnimauxComponent } from './animaux/animaux.component';
 import { NumeroComponent } from './numero/numero.component';
 import { ReserverComponent } from './reserver/reserver.component';
+import { AdminComponent } from './admin/admin.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'reserver',
     component: ReserverComponent
+  },
+  {
+    path: 'admin',
+    component: AdminComponent
   },
 ];
 
