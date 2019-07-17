@@ -11,7 +11,8 @@ export class AnimauxComponent implements OnInit {
   newArtist = {
     id : '',
     name : '',
-    role: ''
+    surnom: '',
+    description: ''
   }
 
   constructor(private connection: AdminService) { }

@@ -11,7 +11,8 @@ export class AdminComponent implements OnInit {
   newArtist = {
     id : '',
     name : '',
-    role: ''
+    surnom: '',
+    description: ''
   }
 
   constructor(private connection: AdminService) { }

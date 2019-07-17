@@ -8,8 +8,12 @@
     <input type="text" name="name" [(ngModel)]="newArtist.name" />
   </div>
   <div class="col-3">
-    <label>Role :</label>
-    <input type="text" name="role" [(ngModel)]="newArtist.role"  />
+    <label>Surnom :</label>
+    <input type="text" name="surnom" [(ngModel)]="newArtist.surnom"  />
+  </div>
+  <div class="col-3">
+    <label>Description :</label>
+    <input type="text" name="description" [(ngModel)]="newArtist.description"  />
   </div>
   <div class="btn">
     <button class="m-2" (click)="create()" onclick="location.reload();">Create</button>
@@ -19,12 +23,14 @@
     <tr>
       <td>ID</td>
       <td>Name</td>
-      <td>Role</td>
+      <td>Surnom</td>
+      <td>Description</td>
     </tr>
     <tr *ngFor="let artist of artists">
       <td>{{ artist.id }}</td>
       <td>{{ artist.name }}</td>
-      <td>{{ artist.role }}</td>
+      <td>{{ artist.surnom }}</td>
+      <td>{{ artist.description }}</td>
       <td>
         <button (click)="deleteArtist(artist.id)" onclick="location.reload();">Delete</button>
       </td>
