@@ -1,18 +1,21 @@
-<div>
-  
-  <label>Id : </label>
-  <input type="text" name="id" [(ngModel)]="newArtist.id" />
-  
-  <label>Name : </label>
-  <input type="text" name="name" [(ngModel)]="newArtist.name" />
-  
-  <label>Role :</label>
-  <input type="text" name="role" [(ngModel)]="newArtist.role"  />
-  
-  <button (click)="create()">Create</button>
-  <button (click)="update()">Update</button>
-  
-  <table *ngIf="artists.length > 0">
+<div class="content">
+  <div class="col-3">
+    <label>Id : </label>
+    <input type="text" name="id" [(ngModel)]="newArtist.id" placeholder="seulement pour update" />
+  </div>
+  <div class="col-3">
+    <label>Name : </label>
+    <input type="text" name="name" [(ngModel)]="newArtist.name" />
+  </div>
+  <div class="col-3">
+    <label>Role :</label>
+    <input type="text" name="role" [(ngModel)]="newArtist.role"  />
+  </div>
+  <div class="btn">
+    <button class="m-2" (click)="create()" onclick="location.reload();">Create</button>
+    <button (click)="update()" onclick="location.reload();">Update</button>
+  </div>
+  <table class="mb-2" *ngIf="artists.length > 0">
     <tr>
       <td>ID</td>
       <td>Name</td>
@@ -22,11 +25,8 @@
       <td>{{ artist.id }}</td>
       <td>{{ artist.name }}</td>
       <td>{{ artist.role }}</td>
-      <td></td>
       <td>
-        <button (click)="deleteArtist(artists.id)">
-          Delete
-        </button>
+        <button (click)="deleteArtist(artist.id)" onclick="location.reload();">Delete</button>
       </td>
     </tr>
   </table>

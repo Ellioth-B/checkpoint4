@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AdminService } from '../service/admin.service';
 
 @Component({
   selector: 'app-animaux',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./animaux.component.scss']
 })
 export class AnimauxComponent implements OnInit {
+  artists = []
+  newArtist = {
+    id : '',
+    name : '',
+    role: ''
+  }
 
-  constructor() { }
+  constructor(private connection: AdminService) { }
 
   ngOnInit() {
+    this.connection.getArtists().subscribe((data: any) => {
+      console.log(data)
+      this.artists = data
+    })
   }
 
 }
