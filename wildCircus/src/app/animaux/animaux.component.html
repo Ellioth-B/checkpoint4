@@ -6,7 +6,7 @@
       </div>
       <div class="col-md-8">
         <div class="card-body">
-          <h5 class="card-title">Race : Ocelot</h5>
+          <h3 class="card-title">Race : Ocelot</h3>
           <h6>Lolo</h6>
           <p class="card-text">Lolo est un félin a mi-chemin entre le chat et le tigre. Il vient d'Amazonie.</p>
         </div>
@@ -20,7 +20,7 @@
       </div>
       <div class="col-md-8">
         <div class="card-body">
-          <h5 class="card-title">Race : Tigre de Sibérie</h5>
+          <h3 class="card-title">Race : Tigre de Sibérie</h3>
           <h6>Taiga</h6>
           <p class="card-text">Taiga nous viens tout droit de Sibérie, c'est une tigresse féroce a l'état sauvage.</p>
         </div>
@@ -34,11 +34,22 @@
         </div>
         <div class="col-md-8">
           <div class="card-body">
-            <h5 class="card-title">Race : Eléphant</h5>
+            <h3 class="card-title">Race : Eléphant</h3>
             <h6>Dumbo</h6>
             <p class="card-text">Dumbo est notre dernier arrivant cette année, il nous a été donné par un cirque en faillite.</p>
           </div>
         </div>
       </div>
     </div>
+</div>
+<div class="card mb-3 ml-2" style="max-width: 40%;" *ngFor="let artist of artists">
+  <div class="row no-gutters">
+    <div class="col-md-8">
+      <div class="card-body">
+        <h3 class="card-title">Nom : {{ artist.name }}</h3>
+        <p class="surnom card-text">Surnom : {{ artist.surnom }}</p>
+        <p>{{ artist.description }}</p>
+      </div>
+    </div>
+  </div>
 </div>
