@@ -1,3 +1,43 @@
-<p>
-  admin works!
-</p>
+<div class="content">
+  <div class="col-3">
+    <label>Id : </label>
+    <input type="text" name="id" [(ngModel)]="newArtist.id" placeholder="seulement pour update" />
+  </div>
+  <div class="col-3">
+    <label>Name : </label>
+    <input type="text" name="name" [(ngModel)]="newArtist.name" />
+  </div>
+  <div class="col-3">
+    <label>Surnom :</label>
+    <input type="text" name="surnom" [(ngModel)]="newArtist.surnom"  />
+  </div>
+  <div class="col-3">
+    <label>Description :</label>
+    <input type="text" name="description" [(ngModel)]="newArtist.description"  />
+  </div>
+  <div class="btn">
+    <button class="m-2" (click)="create()" onclick="location.reload();">Create</button>
+    <button (click)="update()" onclick="location.reload();">Update</button>
+  </div>
+  <table class="mb-2" *ngIf="artists.length > 0">
+    <tr>
+      <td>ID</td>
+      <td>Name</td>
+      <td>Surnom</td>
+      <td>Description</td>
+    </tr>
+    <tr *ngFor="let artist of artists">
+      <td>{{ artist.id }}</td>
+      <td>{{ artist.name }}</td>
+      <td>{{ artist.surnom }}</td>
+      <td>{{ artist.description }}</td>
+      <td>
+        <button (click)="deleteArtist(artist.id)" onclick="location.reload();">Delete</button>
+      </td>
+    </tr>
+  </table>
+  
+  <p *ngIf="artists.length == 0">
+    Pas d'artiste dans ton cirque.
+  </p>
+</div>
