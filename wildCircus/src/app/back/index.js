@@ -16,7 +16,7 @@ app.use((req, res,next) => {
     next()
 })
 
-app.get('/artistes', (req, res) => {
+app.get('/artistes', (req, res) => { // utser de filtre pour pas faire tout passer en donnée
     
     connection.query('SELECT * from artistes', (err, results) => {
         
